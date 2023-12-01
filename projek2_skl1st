@@ -1,0 +1,26 @@
+import numpy as np
+
+data = np.array([[1.0, 3.0], [2.0, 1.0], [3.5, 4.0], [5.0, 0.0], [6.0, 0.5], [9.0, -2.0], [9.5, -3.0]])
+start = .5
+end   = 10
+limit = 1000
+lin_x = np.linspace(start, end, limit)
+
+def a_i():
+    a_return = np.zeros(data.shape[0])
+
+    for i in range(data.shape[0] - 1):
+        a_return[i] =(data[i+1, 1] - data[i, 1]) / (data[i+1, 0] - data[i, 0])
+    
+    return a_return
+
+def S_i():
+    Si = np.zeros(lin_x.shape[0])
+    for i in range(data.shape[0] - 1):
+        Si += ((data[i+1, 1] - data[i, 1])/(data[i+1, 0] - data[i, 0]) * (lin_x - data[i, 0]) + data[i, 1]) * (lin_x < data[i+1, 0]) * (lin_x >= data[i, 0]) 
+
+    Si += ((data[1, 1] - data[0, 1])/(data[1, 0] - data[0, 0]) * (lin_x - data[0, 0]) + data[0, 1]) * (lin_x < data[0, 0]) * (lin_x >= start)
+    Si += ((data[-1, 1] - data[-2, 1])/(data[-1, 0] - data[-2, 0]) * (lin_x - data[-2, 0]) + data[-2, 1]) * (lin_x < end) * (lin_x >= data[-1, 0])
+    Si[-1] += ((data[-1, 1] - data[-2, 1])/(data[-1, 0] - data[-2, 0]) * (lin_x[-1] - data[-2, 0]) + data[-2, 1])
+
+    return Si
