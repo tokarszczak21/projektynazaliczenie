@@ -7,7 +7,7 @@ from scipy.interpolate import CubicSpline
 
 data = np.array([[1.0, 3.0], [2.0, 1.0], [3.5, 4.0], [5.0, 0.0], [6.0, 0.5], [9.0, -2.0], [9.5, -3.0]])
 x = np.linspace(0,10,1000)
-r = sk3.sklejpizde()
+r = sk3.skl()
 t = sk1.S_i()
 m = lg.wzor_lagrange()
 plt.plot(x, r, label = 'sklejana3st')
