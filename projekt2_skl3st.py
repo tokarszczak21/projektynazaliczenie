@@ -49,7 +49,7 @@ def z_i(n):
         z_return[i] = (v_v[i-1] - (h_v[i]*z_return[i+1]))/u_v[i-1]
     return z_return
 
-def sklejpizde(n=data.shape[0]-1):
+def skl(n=data.shape[0]-1):
     a = np.zeros(n)
     b =  np.zeros(n)
     c =  np.zeros(n)
