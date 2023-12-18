@@ -23,7 +23,7 @@ def zadanie():
 
   for i in range(len(x)):
     print(f'{i}\t{x[i]}\t{y[i]}\t{f(x[i], y[i])}')
-  return#jak mnie to kurwa zmęczyło ja pierdole kurwa mać
+  return
 
 if __name__ == "__main__":
   zadanie()
