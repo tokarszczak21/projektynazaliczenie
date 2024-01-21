@@ -27,13 +27,14 @@ for i in range(1,N1.shape[0]):
 
 fig = plt.figure(figsize=(8,8))
 axes = fig.add_subplot(1,1,1)
-axes.plot(t,N1, label ='Popullacja 1')
+axes.plot(t,N1, label ='Populacja 1')
 axes.plot(t,N2, label ='Populacja 2')
 axes.set_xlabel('Czas')
 axes.set_ylabel('Liczność populacji')
 plt.legend()
 plt.show()
-
+#Populacja pierwsza początkowo ma mniejszą liczność niż populacja 2, ale wielkość tej populacji rośnie znacznie szybciej niż populacji drugiej.
+#Obie populacje ostatecznie mają punkty graniczne ale mają one różne wartości
 #Podpunkt b
 epsi3 = 5
 epsi4 = 5
@@ -63,7 +64,7 @@ axes.set_xlabel('Czas')
 axes.set_ylabel('Drapieżnicy')
 plt.legend()
 plt.show()
-
+#Liczności populacji maleją w czasiebardzo intensywnie, populacja druga osiąga liczność populacji ostateczną równą 0, zaś końcowa liczność populacji 1 wynosi ok.1.25
 #Zadanie 3 
 epsi1 = 0.8
 epsi2 = 0.4
@@ -116,7 +117,8 @@ axes.plot(N2_1,N2_2, label ='2')
 axes.plot(N3_1,N3_2, label ='3')
 plt.quiver(X,Y,dX,dY,color='b')
 plt.plot(N1_1,N1_2, color='k')
-axes.set_xlabel('Ofiary')
-axes.set_ylabel('Drapieżnicy')
+axes.set_xlabel('Wielkość populacji 1')
+axes.set_ylabel('Wielkość populacji 2')
 plt.legend()
 plt.show()
+#Im większa liczność populacji 1 na początku tym szybciej maleje liczność populacji 2.  Mówią o tym długośći wektorów na wykresie(są dłuższe i  większe są populacje. 
