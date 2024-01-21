@@ -31,3 +31,4 @@ axes.set_xlabel('Czas')
 axes.set_ylabel('Objętość guza')
 plt.legend()
 plt.show()
+#Wykresy miejsce początkowe mają w tym samym pounkcie i obie populacje dąż do tej samej wartości granicznej jaką jest K. Ale wykres stworzony na podstawie modelu Gompertza zaczyna intensywnie rosnąć wcześniej niż ten z modelu Verhulsta.
